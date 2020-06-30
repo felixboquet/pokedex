@@ -1,7 +1,10 @@
-<ActionBar>
-    <Label text="Home"></Label>
-</ActionBar>
+<ActionBar title="Pokedex"></ActionBar>
 
-<GridLayout>
-    <!-- Add your page content here -->
-</GridLayout>
+<ListView [items]="pokemonList">
+  <ng-template let-item="item">
+    <StackLayout orientation="horizontal">
+      <Label [text]="item.name"></Label>
+      <Image [src]="item.imageSrc" stretch="aspectFit"></Image>
+    </StackLayout>
+  </ng-template>
+</ListView>
