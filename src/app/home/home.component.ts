@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Pokemon } from "../shared/pokemon/pokemon.model";
+import { Pokemon } from "../shared/model/pokemon.model";
 import pokemonJson from "../datas/pokemon.json";
 
 @Component({
@@ -13,21 +13,9 @@ export class HomeComponent implements OnInit {
     pokemonList: Pokemon[] = [];
 
     constructor() {
-      // this.pokemonList = [
-      //   {
-      //     id: 0,
-      //     name: 'Pikachu',
-      //     imageSrc: "https://i.pinimg.com/originals/f5/1d/08/f51d08be05919290355ac004cdd5c2d6.png"
-      //   },
-      //   {
-      //     id: 1,
-      //     name: 'Salameche',
-      //     imageSrc: "https://www.geeknplay.fr/wp-content/uploads/2019/11/Salam%C3%A8che.jpg"
-      //   }
-      // ]
 
       for (var mPokemon of pokemonJson) {
-          let pokemon = new Pokemon(mPokemon.id, mPokemon.name, mPokemon.img);
+          let pokemon = new Pokemon(mPokemon.id, mPokemon.name, mPokemon.img, mPokemon.type);
 
           this.pokemonList.push(pokemon);
       }
