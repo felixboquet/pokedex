@@ -17,3 +17,20 @@ Image {
     width: 100;
     height: 100;
 }
+
+.navBarImg {
+  width: 24;
+  height: 24;
+}
+
+ActionBar {
+    background-color: white;
+    color: black;
+}
+
+.action-label {
+    color: #3C5AFD;
+    font-size: 24;
+    font-weight: bold;
+    vertical-align: center;
+}

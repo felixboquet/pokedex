@@ -1,7 +1,16 @@
-<ActionBar title="Pokedex"></ActionBar>
+<ActionBar title="Pokedex">
+
+  <StackLayout orientation="horizontal">
+    <Image src="https://image.noelshack.com/fichiers-md/2015/07/1423868157-3697-card-communaute.png" stretch="aspectFit" class="navBarImg"></Image>
+    <SearchBar id="searchBar" hint="Enter search term here ..." [text]="sbText" clear="onClear" submit="onSubmit"></SearchBar>
+  </StackLayout>
+
+</ActionBar>
 
 <ListView [items]="pokemonList">
+
   <ng-template let-item="item">
+
     <StackLayout orientation="horizontal">
 
       <StackLayout orientation="vertical">
@@ -19,5 +28,7 @@
       </StackLayout>
 
     </StackLayout>
+
   </ng-template>
+
 </ListView>
