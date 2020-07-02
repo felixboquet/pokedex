@@ -35,3 +35,7 @@ ActionBar {
     font-weight: bold;
     vertical-align: center;
 }
+
+ListView {
+  height: 100%;
+}
