@@ -21,6 +21,7 @@ Image {
 .navBarImg {
   width: 24;
   height: 24;
+  margin-right: 16;
 }
 
 ActionBar {
@@ -29,7 +30,7 @@ ActionBar {
 }
 
 .action-label {
-    color: #3C5AFD;
+    color: #DB3E00;
     font-size: 24;
     font-weight: bold;
     vertical-align: center;

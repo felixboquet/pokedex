@@ -1,0 +1,48 @@
+<!-- Main list of pokemon with search bar -->
+
+<!-- Action bar containing screen title  -->
+<ActionBar title="Pokedex">
+
+  <StackLayout orientation="horizontal">
+    <Image src="https://image.noelshack.com/fichiers-md/2015/07/1423868157-3697-card-communaute.png" stretch="aspectFit" class="navBarImg"></Image>
+    <Label text="Pokedex" class="action-label"></Label>
+  </StackLayout>
+
+</ActionBar>
+
+<StackLayout>
+
+  <!-- Search bar -->
+  <SearchBar id="searchBar" hint="Enter search term here ..." [text]="sbText" (clear)="onClear($event)" (textChange)="onTextChange($event)"></SearchBar>
+
+  <!-- List view containing the pokemon -->
+  <ListView [items]="filteredPokemonList">
+
+    <ng-template let-item="item">
+
+      <!-- Main layout -->
+      <StackLayout orientation="horizontal">
+
+        <!-- First layout containing id and image of the pokemon -->
+        <StackLayout orientation="vertical">
+
+          <Label [text]="item.id" class="title"></Label>
+          <Image [src]="item.imageSrc" stretch="aspectFit"></Image>
+
+        </StackLayout>
+
+        <!-- Second layout containing title and types of the pokemon -->
+        <StackLayout orientation="vertical">
+
+          <Label [text]="item.name" class="title"></Label>
+          <Label [text]="item.type"></Label>
+
+        </StackLayout>
+
+      </StackLayout>
+
+    </ng-template>
+
+  </ListView>
+
+</StackLayout>
